@@ -14,7 +14,6 @@ namespace LibraryDemoApp
         public static List<CheckOut> CheckOuts;
         public static List<Branch> Branches;
         public static List<Book> Books;
-
         public static List<ItemType> ItemTypes;
 
         public static void CreateData()

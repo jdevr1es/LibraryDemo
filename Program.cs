@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace LibraryDemoApp
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args, List<Book> Books)
+        public static void Main(string[] args)
         {
-            Console.WriteLine(Books);
+            DataSource.CreateData();
+
+            foreach (Book b in DataSource.Books)
+            { 
+                Console.WriteLine(b.ItemTitle);
+            }
+
+            foreach (ItemType t in DataSource.ItemTypes)
+            {
+                Console.WriteLine(t.ItemTypeName);
+            }
+
         }
     }
 }
