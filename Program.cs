@@ -8,8 +8,9 @@ namespace LibraryDemoApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args, List<Book> Books)
         {
+            Console.WriteLine(Books);
         }
     }
 }

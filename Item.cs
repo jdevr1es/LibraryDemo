@@ -10,8 +10,9 @@ namespace LibraryDemoApp
     {
         public string ItemId { get; set; }
         public int ItemType { get; set; }
+        public string ItemTitle { get; set; }
         public int NumberOfCopies { get; set; }
-        public CheckedInLocation Location { get; set; }
+        public string Location { get; set; }
 
         //Age below which may not borrow
         public int AgeRestriction { get; set; }
@@ -25,7 +26,7 @@ namespace LibraryDemoApp
         public string Shelf { get; set; }
     }
 
-     enum ItemCondition
+    public enum ItemCondition
     {
         Good,
         Fair,
@@ -34,13 +35,18 @@ namespace LibraryDemoApp
         Unusable
     }
 
-    enum ItemType
+    public class ItemType
     {
-        HardcoverBook,
-        SoftcoverBook,
-        eBook,
-        CD,
-        DVD,
-        Newspaper
+        public string ItemTypeName { get; set; }
+
+        public ItemType(string itemTypeName)
+        {
+            ItemTypeName = itemTypeName;
+        }
+
+        public ItemType()
+        {
+            ItemTypeName = string.Empty;
+        }
     }
 }
