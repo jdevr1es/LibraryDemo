@@ -9,11 +9,19 @@ namespace LibraryDemoApp
     public class CheckOut
     {
         public string ItemBorrowedId { get; set; }
-        public string BorrowId { get; set; }
+        public string BorrowerId { get; set; }
         public DateTime CheckoutDateTime { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime DueDate { get; set; }
         public DateTime CheckinDateTime { get; set; }
         public ItemCondition CheckinCondition { get; set; }
         public string Comments { get; set; }
+
+        public CheckOut(string itemBorrowedId, string borrowerId, DateTime checkOutDateTime, DateTime dueDate)
+        {
+            ItemBorrowedId = itemBorrowedId;
+            BorrowerId = borrowerId;
+            CheckoutDateTime = checkOutDateTime;
+            DueDate = dueDate;
+        }
     }
 }
